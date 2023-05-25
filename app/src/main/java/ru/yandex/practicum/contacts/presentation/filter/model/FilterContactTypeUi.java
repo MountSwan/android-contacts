@@ -7,8 +7,8 @@ import ru.yandex.practicum.contacts.presentation.base.ListDiffInterface;
 public class FilterContactTypeUi implements ListDiffInterface<FilterContactTypeUi> {
 
     @Override
-    public boolean theSameAs(@NonNull FilterContactTypeUi t) {
-        return this.hashCode() == t.hashCode();
+    public boolean theSameAs(@NonNull FilterContactTypeUi newItem) {
+        return this.getContactType() == newItem.getContactType();
     }
 
     private final FilterContactType contactType;

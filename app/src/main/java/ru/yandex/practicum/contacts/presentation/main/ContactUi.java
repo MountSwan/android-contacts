@@ -10,8 +10,8 @@ import ru.yandex.practicum.contacts.presentation.base.ListDiffInterface;
 public class ContactUi implements ListDiffInterface<ContactUi> {
 
     @Override
-    public boolean theSameAs(@NonNull ContactUi t) {
-        return this.hashCode() == t.hashCode();
+    public boolean theSameAs(@NonNull ContactUi newItem) {
+        return this.hashCode() == newItem.hashCode();
     }
 
     private final String name;
